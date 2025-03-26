@@ -15,6 +15,8 @@ class MyAPI
       handle_posts(request, response)
     when '/posts/export'
       handle_export(response)
+    when '/posts/search'
+      handle_search(request, response)
     when %r{/posts/([^/]+)/comments$}
       handle_comments(request, response, $1) # Capture post ID from URL
     when %r{/posts/([^/]+)/comments/([^/]+)$}
@@ -30,6 +32,14 @@ class MyAPI
   end
 
   private
+
+  def handle_search(request, response)
+    query = request.params['q'] || ''
+    page = (request.params['page'] || 1).to_i
+    posts = Posts.search_posts(query, page)
+
+    response.write(posts.to_json)
+  end
 
   def handle_posts(request, response)
     case request.request_method

@@ -24,7 +24,7 @@ class Posts
   end
 
   def self.get_posts(page = 1, per_page = 15)
-    posts = DataManager.all_posts.sort_by { |p| p["date"] }.reverse
+    posts = DataManager.all_posts.sort_by { |p| [p["bookmarked"] ? 0 : 1] }
     posts.each_slice(per_page).to_a[page - 1] || []
   end
 
@@ -73,5 +73,11 @@ class Posts
 
     DataManager.save_data(DataManager::POSTS_FILE, posts)
     post
+  end
+
+  def self.search_posts(query, page = 1, per_page = 15)
+    posts = DataManager.all_posts
+    result = posts.select { |p| p["title"].downcase.include?(query.downcase) }
+    result.sort_by { |p| p["date"] }.reverse.each_slice(per_page).to_a[page - 1] || []
   end
 end
