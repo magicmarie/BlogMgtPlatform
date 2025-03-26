@@ -1,0 +1,16 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "postId": "6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b",
+    "author": "Jane Smith",
+    "content": "Great post!",
+    "date": "2026-01-10T13:00:00Z"
+  },
+  {
+    "id": "e457efc6-796a-480e-83d9-c7cbde1e04fd",
+    "postId": "6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b",
+    "author": "Mariam A",
+    "content": "Great post!",
+    "date": "2025-03-26T15:53:08Z"
+  }
+]

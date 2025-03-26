@@ -1,0 +1,27 @@
+[
+  {
+    "id": "6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b",
+    "title": "Introduction to React",
+    "content": "Lorem ipsum...",
+    "author": "mariam",
+    "tags": [
+      "react",
+      "frontend"
+    ],
+    "date": "2026-01-10T12:34:56Z",
+    "bookmarked": true
+  },
+  {
+    "id": "40471563-50bb-4abf-a8d8-b6a8165c8473",
+    "title": "Introduction to React hooks",
+    "content": "Lorem ipsum qwerty qwerty",
+    "author": "Jane Doe",
+    "tags": [
+      "react",
+      "frontend",
+      "Hooks"
+    ],
+    "date": "2025-03-26T15:33:47Z",
+    "bookmarked": false
+  }
+]
